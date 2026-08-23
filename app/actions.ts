@@ -17,6 +17,9 @@ export async function joinWaitlist(_prev: FormState, formData: FormData): Promis
   const result = await insertRow('waitlist_signups', { email });
 
   if (!result.ok) return { status: 'error', message: result.message };
+  if (result.duplicate) {
+    return { status: 'success', message: "That email's already on the list." };
+  }
   return { status: 'success', message: "You're on the list — we'll email you at launch." };
 }
 

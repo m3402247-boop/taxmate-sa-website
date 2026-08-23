@@ -3,19 +3,21 @@ import Link from 'next/link';
 
 export function Header() {
   return (
-    <header className="border-b border-border bg-card">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="" width={32} height={32} priority />
-          <span className="text-lg font-semibold tracking-tight text-text">TaxMate SA</span>
+    <header className="mkt-nav" id="nav">
+      <div className="mkt-wrap mkt-nav__inner">
+        <Link href="/" className="mkt-nav__brand">
+          <Image src="/logo.png" alt="" width={30} height={30} className="mkt-nav__logo" priority />
+          <span>
+            TaxMate <em>SA</em>
+          </span>
         </Link>
 
-        <nav className="flex items-center gap-6 text-sm font-medium text-text-secondary">
-          <Link href="/#waitlist" className="hidden hover:text-text sm:inline">
-            Waitlist
-          </Link>
-          <Link href="/contact" className="hover:text-text">
+        <nav className="flex items-center gap-5">
+          <Link href="/contact" className="hidden text-sm font-medium text-text-secondary hover:text-text sm:inline">
             Contact
+          </Link>
+          <Link href="/#waitlist" className="btn btn--primary btn--sm">
+            Join the waitlist
           </Link>
         </nav>
       </div>

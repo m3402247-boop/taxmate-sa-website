@@ -12,7 +12,7 @@
 export async function insertRow(
   table: 'waitlist_signups' | 'contact_submissions',
   row: Record<string, string>,
-): Promise<{ ok: true } | { ok: false; message: string }> {
+): Promise<{ ok: true; duplicate?: boolean } | { ok: false; message: string }> {
   const url = process.env.SUPABASE_URL;
   const anonKey = process.env.SUPABASE_ANON_KEY;
 
@@ -34,8 +34,11 @@ export async function insertRow(
   if (response.ok) return { ok: true };
 
   // Postgres reports a duplicate email as a unique-constraint violation.
+  // Not really a failure from the person's point of view — they're already
+  // getting what they wanted — so this is reported as a duplicate, not an
+  // error, and the caller decides how to present that.
   if (response.status === 409) {
-    return { ok: false, message: "That email's already on the list." };
+    return { ok: true, duplicate: true };
   }
 
   return { ok: false, message: 'Something went wrong. Please try again.' };
