@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/*
+ * Same palette as the app (src/constants/theme.ts in the finance-app repo),
+ * so the website and the app read as the same product. Light mode only,
+ * matching the app — this deliberately doesn't follow the OS dark-mode
+ * preference like the default Next.js starter did.
+ */
+:root {
+  --color-bg: #f4f5f7;
+  --color-card: #ffffff;
+  --color-card-alt: #f6f7f9;
+  --color-border: #e7e9ed;
+
+  --color-text: #14171c;
+  --color-text-secondary: #5f6672;
+  --color-text-muted: #98a0ac;
+
+  --color-accent: #1ba5dc;
+  --color-accent-bg: #e3f4fb;
+  --color-accent-text: #0a5b7c;
+
+  --color-income: #2e9e6b;
+  --color-income-bg: #e3f4ec;
+  --color-income-text: #1a6446;
+
+  --color-expense: #c1820f;
+  --color-expense-bg: #faefdb;
+  --color-expense-text: #784d06;
+
+  --color-danger: #d45744;
+  --color-danger-bg: #fbe9e6;
+  --color-danger-text: #8a2e20;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-card: var(--color-card);
+  --color-card-alt: var(--color-card-alt);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-bg: var(--color-accent-bg);
+  --color-accent-text: var(--color-accent-text);
+  --color-income: var(--color-income);
+  --color-income-bg: var(--color-income-bg);
+  --color-income-text: var(--color-income-text);
+  --color-expense: var(--color-expense);
+  --color-expense-bg: var(--color-expense-bg);
+  --color-expense-text: var(--color-expense-text);
+  --color-danger: var(--color-danger);
+  --color-danger-bg: var(--color-danger-bg);
+  --color-danger-text: var(--color-danger-text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
