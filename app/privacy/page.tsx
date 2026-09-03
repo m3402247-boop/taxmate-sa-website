@@ -43,10 +43,10 @@ export default function PrivacyPolicyPage() {
         service. The app asks you before it does this the first time and names the
         service; you can turn it off afterwards in Settings → Statement &amp; receipt
         reading, and then statements and receipts are entered by hand. That service is
-        Google Gemini, used on its paid tier, which means Google receives only the file
-        itself, only to extract the transaction data, does not use it to train or improve
-        its models, and is held to the same protection of your data set out in this
-        policy. A statement PDF is deleted from our storage automatically as soon as its
+        Google Gemini, and it receives only the file, only to read the transaction data
+        off it. On the plan we use today, Google&apos;s terms allow them to use submitted
+        content to improve their own services; we are moving to the paid plan, which does
+        not. A statement PDF is deleted from our storage automatically as soon as its
         transactions are saved; a receipt photo is kept until you delete it or your
         account. If a statement shows other people&apos;s names — a client paying you, or
         anyone else on the account — that&apos;s unavoidable to read the statement, and
@@ -63,8 +63,9 @@ export default function PrivacyPolicyPage() {
         to them is necessary to provide the service you asked for — reading your
         statement, storing your account, replying to your message — which is the basis we
         rely on under POPIA&apos;s rules for sending personal information abroad. We
-        don&apos;t use any provider we don&apos;t need, and none of them may use your data
-        for anything except providing that service to us.
+        don&apos;t use any provider we don&apos;t need. Apart from the AI reader&apos;s
+        current plan, described above, none of them may use your data for anything except
+        providing that service to us.
       </LegalSection>
 
       <LegalSection heading="How long we keep it">
