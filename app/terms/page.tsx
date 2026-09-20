@@ -2,7 +2,7 @@ import { LegalPage, LegalSection } from '@/components/legal-section';
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms of Service" updated="23 August 2026">
+    <LegalPage title="Terms of Service" updated="20 September 2026">
       <LegalSection heading="Using this site and the app">
         TaxMate SA is for tracking your own income and expenses and estimating
         provisional tax. You must be at least 18, or the age of majority where you live,
@@ -23,6 +23,17 @@ export default function TermsPage() {
         extracts and calculates from it, but doesn't verify it against SARS or your
         bank. Keep your login private; anyone who can sign in as you can see and edit
         everything in your account.
+      </LegalSection>
+
+      <LegalSection heading="Subscription and billing">
+        The app is free for your first 30 days. After that, TaxMate SA Pro is an
+        auto-renewing monthly subscription; the price is shown in the app before you
+        subscribe. Payment is taken by Apple from your Apple ID when you confirm the
+        purchase, and the subscription renews every month until you cancel. To avoid
+        the next charge, cancel at least 24 hours before the end of the current period:
+        open iPhone Settings, tap your name, then Subscriptions. Refunds are handled by
+        Apple, at reportaproblem.apple.com. Deleting your TaxMate SA account does not
+        cancel a subscription, so cancel it in your Apple settings first.
       </LegalSection>
 
       <LegalSection heading="Account deletion">
